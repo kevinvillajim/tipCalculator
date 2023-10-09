@@ -1,4 +1,6 @@
 [Proyecto Terminado](https://kevinvillajim.github.io/tipCalculator/)
+
+
 Bienvenido al MiniProyecto del nivel 1. En este proyecto estaremos aplicando los conocimientos adquiridos durante esta primera y segunda semana. Sigue las instrucciones de este archivo para completar el proyecto y ten en cuenta que estas mismas instrucciones se tomarán en cuenta para la evaluación del proyecto.
 
 # Instrucciones
