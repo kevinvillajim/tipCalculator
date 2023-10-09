@@ -1,0 +1,98 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Porcentaje</title>
+</head>
+<body>
+    <h1>Calculadora de Porcentaje</h1>
+    <label for="numberInput">Ingrese un número: </label>
+    <input type="number" id="numberInput">
+    <br><br>
+    <button class="percentage-button" value="10">10%</button>
+    <button class="percentage-button" value="12">12%</button>
+    <button class="percentage-button" value="30">30%</button>
+    <button class="percentage-button" value="50">50%</button>
+    <button class="percentage-button" value="90">90%</button>
+    <button class="percentage-button" value="95">95%</button>
+
+    <script>
+        // Obtener referencia al input y a los botones
+        const numberInput = document.getElementById('numberInput');
+        const percentageButtons = document.querySelectorAll('.percentage-button');
+
+        // Agregar un evento click a cada botón
+        percentageButtons.forEach(button => {
+            button.addEventListener('click', () => calcularPorcentaje(button.value));
+        });
+
+        // Función para calcular y mostrar el porcentaje
+        function calcularPorcentaje(percentage) {
+            const inputValue = parseFloat(numberInput.value);
+            const percentageValue = parseFloat(percentage);
+            
+            const calculatedPercentage = (inputValue * percentageValue) / 100;
+            const calculatedTotalWithPercentage = inputValue + calculatedPercentage;
+            const calculatedTotalMinusPercentage = inputValue - calculatedPercentage;
+
+            const resultMessage = `Porcentaje: ${calculatedPercentage.toFixed(2)}\n` +
+                                  `Total + Porcentaje: ${calculatedTotalWithPercentage.toFixed(2)}\n` +
+                                  `Total - Porcentaje: ${calculatedTotalMinusPercentage.toFixed(2)}`;
+
+            alert(resultMessage);
+        }
+    </script>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Porcentaje</title>
+</head>
+<body>
+    <h1>Calculadora de Porcentaje</h1>
+    <label for="numberInput">Ingrese un número: </label>
+    <input type="number" id="numberInput">
+    <br><br>
+    <button class="percentage-button" value="10">10%</button>
+    <button class="percentage-button" value="12">12%</button>
+    <button class="percentage-button" value="30">30%</button>
+    <button class="percentage-button" value="50">50%</button>
+    <button class="percentage-button" value="90">90%</button>
+    <button class="percentage-button" value="95">95%</button>
+    <br><br>
+    <span id="result"></span>
+
+    <script>
+        // Obtener referencia al input y a los botones
+        const numberInput = document.getElementById('numberInput');
+        const percentageButtons = document.querySelectorAll('.percentage-button');
+        const resultSpan = document.getElementById('result');
+
+        // Agregar un evento click a cada botón
+        percentageButtons.forEach(button => {
+            button.addEventListener('click', () => calcularPorcentaje(button.value));
+        });
+
+        // Función para calcular y mostrar el porcentaje
+        function calcularPorcentaje(percentage) {
+            const inputValue = parseFloat(numberInput.value);
+            const percentageValue = parseFloat(percentage);
+            
+            const calculatedPercentage = (inputValue * percentageValue) / 100;
+            const calculatedTotalWithPercentage = inputValue + calculatedPercentage;
+            const calculatedTotalMinusPercentage = inputValue - calculatedPercentage;
+
+            const resultMessage = `Porcentaje: ${calculatedPercentage.toFixed(2)}<br>` +
+                                  `Total + Porcentaje: ${calculatedTotalWithPercentage.toFixed(2)}<br>` +
+                                  `Total - Porcentaje: ${calculatedTotalMinusPercentage.toFixed(2)}`;
+
+            resultSpan.innerHTML = resultMessage;
+        }
+    </script>
+</body>
+</html>
